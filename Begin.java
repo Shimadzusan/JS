@@ -16,6 +16,8 @@ public class Begin {
 11-05-2018
  */
 	////////first try to commit
+	///второй коммит
+	
 	//VACANCY
 	
 	static String mnsk_java = "https://hh.ru/search/vacancy?text=Java&only_with_salary=false&specialization=1.221&area=1002&enable_snippets=true&clusters=true&no_magic=true&salary=&from=suggest_post";
