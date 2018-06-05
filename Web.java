@@ -12,16 +12,16 @@ public class Web {
 
 	public static void main(String[] args) {
 
-		System.out.println("метод 1. Извлечение текста");
+		System.out.println("РјРµС‚РѕРґ 1. РР·РІР»РµС‡РµРЅРёРµ С‚РµРєСЃС‚Р°");
 		//web("Hello");
-		System.out.println("метод 2. Поиск комбинации символов Х");
-		System.out.println("метод 3. Извлечение комбинации символов");
-		System.out.println("метод 4. Распознавание образа, символа, извлечение числа");
-		System.out.println("метод 5. Запись числа(значения) в БД");
+		System.out.println("РјРµС‚РѕРґ 2. РџРѕРёСЃРє РєРѕРјР±РёРЅР°С†РёРё СЃРёРјРІРѕР»РѕРІ РҐ");
+		System.out.println("РјРµС‚РѕРґ 3. РР·РІР»РµС‡РµРЅРёРµ РєРѕРјР±РёРЅР°С†РёРё СЃРёРјРІРѕР»РѕРІ");
+		System.out.println("РјРµС‚РѕРґ 4. Р Р°СЃРїРѕР·РЅР°РІР°РЅРёРµ РѕР±СЂР°Р·Р°, СЃРёРјРІРѕР»Р°, РёР·РІР»РµС‡РµРЅРёРµ С‡РёСЃР»Р°");
+		System.out.println("РјРµС‚РѕРґ 5. Р—Р°РїРёСЃСЊ С‡РёСЃР»Р°(Р·РЅР°С‡РµРЅРёСЏ) РІ Р‘Р”");
 
 	}
 	
-	//Извлечение текста по URL
+	//РР·РІР»РµС‡РµРЅРёРµ С‚РµРєСЃС‚Р° РїРѕ URL
 	
 	public static void web(String s){
 		
@@ -37,9 +37,9 @@ public class Web {
 		//String title2 = doc.html();
 		////////+++/////////////////////
 		
-		result = doc.text(); //result ---> Исходный текст
+		result = doc.text(); //result ---> РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚
 //		
-//		System.out.println(result); //Вывод текста в консоль
+//		System.out.println(result); //Р’С‹РІРѕРґ С‚РµРєСЃС‚Р° РІ РєРѕРЅСЃРѕР»СЊ
 //		System.out.println();
 //		System.out.println(result.length());
 		
@@ -55,7 +55,7 @@ public class Web {
 //		
 	}
 	
-	//ПРЕОБРАЗОВАНИЕ, УДАЛЕНИЕ ПРОБЕЛОВ И ПРИВЕДЕНИЕ К НИЖНЕМУ РЕГИСТРУ
+	//РџР Р•РћР‘Р РђР—РћР’РђРќРР•, РЈР”РђР›Р•РќРР• РџР РћР‘Р•Р›РћР’ Р РџР РР’Р•Р”Р•РќРР• Рљ РќРР–РќР•РњРЈ Р Р•Р“РРЎРўР РЈ
 	
 	public static void work(){
 		
@@ -69,7 +69,7 @@ String j = s;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-String[] text5 = s.split(" "); //УДАЛЕНИЕ ПРОБЕЛОВ
+String[] text5 = s.split(" "); //РЈР”РђР›Р•РќРР• РџР РћР‘Р•Р›РћР’
 
 for(int i = 0; i < text5.length; i++) {
 //System.out.println(text5[i]);
@@ -83,7 +83,7 @@ for(int i = 0; i < kk.length; i++) {
 //System.out.println(kk[i]+" ooo");
 work = work + kk[i];
 
-// work - это текст без пробелов с нижним регистром
+// work - СЌС‚Рѕ С‚РµРєСЃС‚ Р±РµР· РїСЂРѕР±РµР»РѕРІ СЃ РЅРёР¶РЅРёРј СЂРµРіРёСЃС‚СЂРѕРј
 
 
 }
@@ -91,7 +91,7 @@ work = work + kk[i];
 	//System.out.println(work);	
 	}
 	
-	//Поиск
+	//РџРѕРёСЃРє
 	
 	public static void search(){
 		
@@ -104,10 +104,10 @@ work = work + kk[i];
 		
 		for(int i = 0; i < mass.length; i++){
 			//System.out.println("Im SYRIA");
-			//!!! СИРИЯ !!!
-			//накарте307вакансий
+			//!!! РЎРР РРЇ !!!
+			//РЅР°РєР°СЂС‚Рµ307РІР°РєР°РЅСЃРёР№
 			
-				if(mass[i] == 'н' && mass[i+1] == 'а' && mass[i+2] == 'к' && mass[i+3] == 'а' && mass[i+4] == 'р' && mass[i+5] == 'т' && mass[i+6] == 'е'){
+				if(mass[i] == 'РЅ' && mass[i+1] == 'Р°' && mass[i+2] == 'Рє' && mass[i+3] == 'Р°' && mass[i+4] == 'СЂ' && mass[i+5] == 'С‚' && mass[i+6] == 'Рµ'){
 					System.out.println("+++ZZZ+++");
 					s1 = "" + mass[i] + mass[i+1] + mass[i+2] + mass[i+3] + mass[i+4]+ mass[i+5] + mass[i+6] + mass[i+7] + mass[i+8] + mass[i+9] + mass[i+10] + mass[i+11] + mass[i+12];
 					
@@ -120,14 +120,14 @@ work = work + kk[i];
 			}
 		
 		System.out.println(s1);
-		//нашли кусок интересующего нас текста и извлекли его присвоив некоторой переменной String
+		//РЅР°С€Р»Рё РєСѓСЃРѕРє РёРЅС‚РµСЂРµСЃСѓСЋС‰РµРіРѕ РЅР°СЃ С‚РµРєСЃС‚Р° Рё РёР·РІР»РµРєР»Рё РµРіРѕ РїСЂРёСЃРІРѕРёРІ РЅРµРєРѕС‚РѕСЂРѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ String
 		symb = s1;
 		
 	}
 	
 	public static void extract(){
 		
-		//из извлеченного куска, что нас интересует извлекается число и преобразуется в тип INT
+		//РёР· РёР·РІР»РµС‡РµРЅРЅРѕРіРѕ РєСѓСЃРєР°, С‡С‚Рѕ РЅР°СЃ РёРЅС‚РµСЂРµСЃСѓРµС‚ РёР·РІР»РµРєР°РµС‚СЃСЏ С‡РёСЃР»Рѕ Рё РїСЂРµРѕР±СЂР°Р·СѓРµС‚СЃСЏ РІ С‚РёРї INT
 		
 		System.out.println("I am Exemple!");
 		//System.out.println(result);
@@ -138,12 +138,12 @@ work = work + kk[i];
 		
 		for(int i = 0; i < mass5.length; i++){
 			
-			if(mass5[i] == 'е'){
-				if(mass5[i+1] != 'в'){s5 = "" + mass5[i+1];}else{break;}
-				if(mass5[i+2] != 'в'){s5 = "" + mass5[i+1] + mass5[i+2];}else{break;}
-				if(mass5[i+3] != 'в'){s5 = "" + mass5[i+1] + mass5[i+2] + mass5[i+3];}else{break;}
-				if(mass5[i+4] != 'в'){s5 = "" + mass5[i+1] + mass5[i+2] + mass5[i+3] + mass5[i+4];}else{break;}
-				if(mass5[i+5] != 'в'){s5 = "" + mass5[i+1] + mass5[i+2] + mass5[i+3] + mass5[i+4] + mass5[i+5];}else{break;}
+			if(mass5[i] == 'Рµ'){
+				if(mass5[i+1] != 'РІ'){s5 = "" + mass5[i+1];}else{break;}
+				if(mass5[i+2] != 'РІ'){s5 = "" + mass5[i+1] + mass5[i+2];}else{break;}
+				if(mass5[i+3] != 'РІ'){s5 = "" + mass5[i+1] + mass5[i+2] + mass5[i+3];}else{break;}
+				if(mass5[i+4] != 'РІ'){s5 = "" + mass5[i+1] + mass5[i+2] + mass5[i+3] + mass5[i+4];}else{break;}
+				if(mass5[i+5] != 'РІ'){s5 = "" + mass5[i+1] + mass5[i+2] + mass5[i+3] + mass5[i+4] + mass5[i+5];}else{break;}
 				
 			}
 		}
