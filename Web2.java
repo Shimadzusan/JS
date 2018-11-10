@@ -86,10 +86,7 @@ public class Web2 {
 		public static void search(){
 			
 			char[] mass = work.toCharArray();
-//			int sir = 0;
-//			int rus = 0;
-//			int us = 0;
-//			int am = 0;
+
 			String s1 = "";
 			
 			for(int i = 0; i < mass.length; i++){
@@ -98,7 +95,6 @@ public class Web2 {
 				//катель с - ***
 				
 					if(mass[i] == 'к' && mass[i+1] == 'а' && mass[i+2] == 'к' && mass[i+3] == 'с' && mass[i+4] == 'д' && mass[i+5] == 'е' && mass[i+6] == 'л'){
-						System.out.println("+++ZZZ+++");
 						s1 = "" + mass[i] + mass[i+1] + mass[i+2] + mass[i+3] + mass[i+4]+ mass[i+5] + mass[i+6] + mass[i-12] + mass[i-11] + mass[i-10] + mass[i-9] + mass[i-8] + mass[i-7];
 						
 						//sir++;
@@ -109,7 +105,7 @@ public class Web2 {
 					
 				}
 			work = "";//обнкление переменной, иначе происходит накопление значения в методе work
-			System.out.println(s1);
+//System.out.println(s1);
 			//нашли кусок интересующего нас текста и извлекли его присвоив некоторой переменной String
 			String[] text20 = s1.split(" "); //УДАЛЕНИЕ ПРОБЕЛОВ
 			String ss = "";
@@ -142,7 +138,7 @@ public class Web2 {
 				list2 = list2 + b;
 				
 			}
-			System.out.println("****" + list2 + "***");
+			System.out.println("value: " + list2 + " ...is extract");
 			
 			//LIST2 ЭТО ОЧИЩЕННЫЙ СТРИНГ!!!
 			s10 = list2;

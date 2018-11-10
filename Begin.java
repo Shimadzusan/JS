@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Date;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -12,13 +13,13 @@ public class Begin {
  310 156
 1509 911
 772 508
-
 11-05-2018
+
+01-10-2018 48секунд на выпонение
+17-10-2018 53 секунды на выполнение
+22-10-2018 34 (!??) секунды на выполнение
  */
-	////////first try to commit
-	///второй коммит
-	//ТРЕТИЙ КОММИТ
-	
+
 	//VACANCY
 	
 	static String mnsk_java = "https://hh.ru/search/vacancy?text=Java&only_with_salary=false&specialization=1.221&area=1002&enable_snippets=true&clusters=true&no_magic=true&salary=&from=suggest_post";
@@ -78,8 +79,9 @@ public class Begin {
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		
-	System.out.println("Hello Universe!");
+	Date date1 = new Date();
+	long d1 = date1.getTime();
+	System.out.println("Start programm JS2...");
 	
 
 	Web web = new Web();
@@ -150,43 +152,16 @@ public class Begin {
 	
 	web2.web(r_spb_java_jun);
 	r_spb_java_jun_bd = web2.s10;
-	
 
-
-//	web.work();
-//	web.search();
-//	web.extract();
-	//web.exemple();
-	
-	//////////////////////////ВЫЗЫВАЕМ МЕТОД ЗАПИСИ В БАЗУ ДАННЫХ!!!
-	
-	//МЕТОД БАЗЫ ДАННЫХ
 	method_db();
 	
+// Время выполнения программы
+	Date date2 = new Date();
+	long d2 = date2.getTime();
+	long d3 = d2 - d1;
+	System.out.println("Время выпонения: " + d3);
+	System.out.println("Program JS2 is done ...end");
 	}
-	
-//	public static void Method(){
-//		
-//String s = mnsk_java;
-//	
-//	Document doc = null;
-//	try {
-//		doc = Jsoup.connect(s).get();
-//	} catch (IOException e) {
-//		e.printStackTrace();
-//	}
-//	
-//	//String title2 = doc.html();
-//	////////+++/////////////////////
-//	
-//	String result = doc.text(); //result ---> Исходный текст
-//	
-//	System.out.println(result);
-//	System.out.println();
-//	System.out.println(result.length());
-////////////////////////////////////////////////CLEAR/////////////////////////////////
-//
-//	}
 
 	public static void method_db() throws ClassNotFoundException, SQLException{
 		System.out.println();
@@ -207,17 +182,8 @@ public class Begin {
 		System.out.println();
 		System.out.println("*********************************************************************");
 		System.out.println();
-//		System.out.println(r_msk_java_bd + " " + r_msk_c_bd);
-//		System.out.println(r_spb_java_bd + " " + r_spb_c_bd);
-//		System.out.println();
-//		System.out.println("Junior");
-//		//System.out.println("mnsk: " +  + " msk: " + msk_java_jun_bd + " spb: " + spb_java_jun_bd);
-//		System.out.println("Junior RESUME");
-//		System.out.println("mnsk: " + r_mnsk_java_jun_bd + " msk: " + r_msk_java_jun_bd + " spb: " + r_spb_java_jun_bd);
-//		
-		/////////////////////////////////////////////////////////////////////////////
+
 		Web_db webdb = new Web_db();
 		webdb.web_db();
 	}
-	
 }

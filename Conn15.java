@@ -15,23 +15,20 @@
 		//public  static String s = "INSERT INTO 'users' ('time', 'syria', 'russia', 'usa') VALUES ('12:48','Masha', 'Pascha', 'Jok'); ";
 		 private static final String SQL = "DELETE FROM users WHERE id = \"3\"";
 		
-		// --------ПОДКЛЮЧЕНИЕ К БАЗЕ ДАННЫХ--------
+		// --------пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ--------
 		public static void Conn() throws ClassNotFoundException, SQLException 
 		   {
 			   conn = null;
 			   
-			   Class.forName("org.sqlite.JDBC");			//Драйвер (java-class) которым мы пользуемся ---> "org.sqlite.JDBC"
+			   Class.forName("org.sqlite.JDBC");			//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (java-class) пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ---> "org.sqlite.JDBC"
 			   
 			   
-			   conn = DriverManager.getConnection("jdbc:sqlite:TEST55.s3db", "root", "123"); //...
-			   
-			   //передача сведений о подключении к базе данных в виде URL-адреса подключения "jdbc:sqlite:TEST5.s3db"
-			   
-			   
-			   System.out.println("База Подключена!");
+			   conn = DriverManager.getConnection("jdbc:sqlite:js2_data_base.s3db", "root", "123"); //...
+			      
+			   System.out.println("connect to js2_data_base ...complete");
 		   }
 		
-		// --------Создание таблицы--------
+		// --------пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ--------
 		public static void CreateDB() throws ClassNotFoundException, SQLException
 		   {
 			//conn.
@@ -40,18 +37,13 @@
 			statmt = conn.createStatement();
 			statmt.execute("CREATE TABLE if not exists 'users' ('id' INTEGER PRIMARY KEY AUTOINCREMENT, 'time' text, 'v_mnsk_j' text,'v_mnsk_c' text, 'v_mnsk_jj' text, 'v_msk_j' text,  'v_msk_c' text, 'v_msk_jj' text, 'v_spb_j' text, 'v_spb_c' text, 'v_spb_jj' text, 'r_mnsk_j' text,'r_mnsk_c' text, 'r_mnsk_jj' text, 'r_msk_j' text,  'r_msk_c' text, 'r_msk_jj' text, 'r_spb_j' text, 'r_spb_c' text, 'r_spb_jj' text);");
 			
-			System.out.println("Таблица создана или уже существует.");
 		   }
 		
-		// --------Заполнение таблицы--------
+		// --------пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ--------
 		
 		public static void WriteDB() throws SQLException
 		{
-			
-			
-			
-			//////////////////////////////////////////////////////////////////////////////////////
-			
+	
 			Begin begin = new Begin();
 			
 			//////////////////////////////////////////////////////////////////////////////////////
@@ -83,11 +75,7 @@
 			//String data_time = hours + ":"+ min;
 			String data_time = day + " "+ moon;
 			
-			///////////////////////////////////////////////////////////////////////////////////////
-			
-			System.out.println("I am Last!!!");
-			//Sar sar = new Sar();
-			//sar.main(null);
+///////////////////////////////////////////////////////////////////////////////////////
 			
 			//VACANCY
 			
@@ -119,35 +107,17 @@
 			String r_spb_c = begin.r_spb_c_bd;
 			String r_spb_jj = begin.r_spb_java_jun_bd;
 			
-			
-			System.out.println();
-			System.out.println("*************************************");
-			//System.out.println(a + " " + b + " " + c + " " + d);
-			
-			//String write = "Syria: " + a + "Russia: " + b + "USA: " + c + "America: " + d;
-			
-			//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 			
 			String s = "INSERT INTO 'users' ('time', 'v_mnsk_j', 'v_mnsk_c', 'v_mnsk_jj', 'v_msk_j', 'v_msk_c', 'v_msk_jj', 'v_spb_j', 'v_spb_c', 'v_spb_jj', 'r_mnsk_j', 'r_mnsk_c', 'r_mnsk_jj', 'r_msk_j', 'r_msk_c', 'r_msk_jj', 'r_spb_j', 'r_spb_c', 'r_spb_jj') VALUES ('" + data_time + "','" + v_mnsk_j + "', '" + v_mnsk_c + "', '" + v_mnsk_jj + "', '" + v_msk_j + "', '" + v_msk_c + "', '" + v_msk_jj + "', '" + v_spb_j + "', '" + v_spb_c + "', '" + v_spb_jj + "','" + r_mnsk_j + "', '" + r_mnsk_c + "', '" + r_mnsk_jj + "', '" + r_msk_j + "', '" + r_msk_c + "', '" + r_msk_jj + "', '" + r_spb_j + "', '" + r_spb_c + "', '" + r_spb_jj + "'); ";
 			
-			
-			//////////////////////////////////////////////////////////////////////////////////////
-			
-			//statmt.executeUpdate( "DELETE FROM users WHERE user_id = \"1\"");
-			//   "DELETE FROM users WHERE user_id = \"1\""
-			 //statmt.executeUpdate(SQL);
-				//resSet.deleteRow();
-//				String f = "INSERT INTO 'users' ('name', 'adress', 'phone') VALUES ('Petya', 'NY', 4568);";
-//			   statmt.execute(f);
-//			   statmt.execute("INSERT INTO 'users' ('name', 'phone') VALUES ('Vasya', 321789); ");
-			   //statmt.execute("INSERT INTO 'users' ('syria', 'russia', 'usa') VALUES ('Masha', 'Pascha', 'Jok'); ");
 			   statmt.execute(s);
 //			  
-			   System.out.println("Таблица заполнена");
+			   System.out.println("writing to js2_data_base ...complete");
 		}
 		
 		
-		// -------- Вывод таблицы--------
+		// -------- пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ--------
 		public static void ReadDB() throws ClassNotFoundException, SQLException
 		   {
 			// statmt.executeUpdate(SQL);
@@ -179,17 +149,17 @@
 //		         }
 			}	
 			
-			System.out.println("Таблица выведена");
+			System.out.println("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		    }
 		
-			// --------Закрытие--------
+			// --------пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ--------
 			public static void CloseDB() throws ClassNotFoundException, SQLException
 			   {
 				conn.close();
 				statmt.close();
 				resSet.close();
 				
-				System.out.println("Соединения закрыты");
+				System.out.println("js2_data_base is closed");
 			   }
 
 	}
